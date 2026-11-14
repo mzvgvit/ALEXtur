@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Отзывы путешественников | ALEXtur</title>
+<meta name="description" content="Отзывы туристов об экскурсиях ALEXtur. Оставьте свой отзыв с оценкой из пяти звёзд.">
+<link rel="icon" type="image/svg+xml" href="img/logo/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="reviews">
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+<div id="site-header-host"></div>
+<main id="main">
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+ <ol><li><a href="index.html" data-i18n="nav.index">Главная</a></li><li aria-current="page" data-i18n="nav.reviews">Отзывы</li></ol>
+</nav>
+<section class="section">
+ <div class="container">
+  <h1 data-i18n="reviews.h1">Отзывы путешественников</h1>
+  <p class="rev-stat" data-i18n="reviews.stat">★★★★★&nbsp; 4,98 из 5 · 158 525 отзывов — вашим быть следующим</p>
+  <p data-i18n="reviews.publish">Публикуем всё: и восторженные, и сдержанные. Честность — часть миссии.</p>
+  <div id="mine-wrap" hidden>
+   <h2 style="margin-top:24px" data-i18n="reviews.mineh">Ваши свежие отзывы</h2>
+   <div class="revs" id="reviews-mine"></div>
+  </div>
+  <h2 style="margin-top:30px" data-i18n="reviews.listh">Что говорят туристы</h2>
+  <div class="revs" id="reviews-list"></div>
+ </div>
+</section>
+<section class="section section--paper">
+ <div class="container">
+  <h2 data-i18n="reviews.formh">Оставить отзыв</h2>
+  <p style="margin-bottom:18px" data-i18n="reviews.formp">Поездка с ALEXtur? Расскажите, как всё прошло.</p>
+  <div class="form-card">
+   <form id="review-form" novalidate>
+    <div class="form-grid">
+     <div><label class="f-label" for="rf-name" data-i18n="reviews.labname">Имя *</label>
+      <input class="field" id="rf-name" name="name" type="text" autocomplete="name" required></div>
+     <div><label class="f-label" for="rf-email" data-i18n="reviews.labemail">Почта (не публикуется) *</label>
+      <input class="field" id="rf-email" name="email" type="email" autocomplete="email" required></div>
+     <div class="full"><label class="f-label" for="rf-dir" data-i18n="reviews.labdir">Направление поездки</label>
+      <select class="field" id="rf-dir" name="dir">
+       <option value="d1" data-i18n="reviews.d1">Италия для русских</option>
+       <option value="d2" data-i18n="reviews.d2">Мир для итальянцев</option>
+       <option value="d3" selected data-i18n="reviews.d3">Италия и Россия</option>
+      </select></div>
+     <div class="full"><span class="f-label" data-i18n="reviews.labrating">Оценка</span>
+      <div class="rating" role="radiogroup" data-i18n-attr="aria-label:reviews.ph5">
+       <input type="radio" name="rating" id="r5" value="5" checked><label for="r5" title="5">★</label>
+       <input type="radio" name="rating" id="r4" value="4"><label for="r4" title="4">★</label>
+       <input type="radio" name="rating" id="r3" value="3"><label for="r3" title="3">★</label>
+       <input type="radio" name="rating" id="r2" value="2"><label for="r2" title="2">★</label>
+       <input type="radio" name="rating" id="r1" value="1"><label for="r1" title="1">★</label>
+      </div></div>
+     <div class="full"><label class="f-label" for="rf-text" data-i18n="reviews.labtext">Ваш отзыв *</label>
+      <textarea class="field" id="rf-text" name="text" minlength="20" data-i18n-attr="placeholder:reviews.ph"></textarea></div>
+     <div class="full check">
+      <input type="checkbox" id="rf-consent" name="consent" required>
+      <label for="rf-consent" data-i18n="reviews.consent">Согласен на публикацию имени и текста отзыва.</label>
+     </div>
+     <div class="full"><button class="btn" type="submit" data-i18n="reviews.submit">Отправить отзыв</button></div>
+    </div>
+    <p class="form-err" id="form-err" role="alert"></p>
+    <p class="form-ok" id="form-ok" hidden data-i18n="reviews.ok">Спасибо! Отзыв получен и появится на сайте после модерации. 💚</p>
+   </form>
+  </div>
+ </div>
+</section>
+</main>
+<div id="site-footer-host"></div>
+<script src="js/i18n.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/main.js"></script>
+<script src="js/reviews.js"></script>
+</body>
+</html>

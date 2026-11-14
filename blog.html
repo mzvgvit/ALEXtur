@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Блог о странах | ALEXtur</title>
+<meta name="description" content="Блог ALEXtur: сорок пять стран, каждая с обзором и фото. Каждый день — новая подборка из 7–8 стран.">
+<link rel="icon" type="image/svg+xml" href="img/logo/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="blog">
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+<div id="site-header-host"></div>
+<main id="main">
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+ <ol><li><a href="index.html" data-i18n="nav.index">Главная</a></li><li aria-current="page" data-i18n="nav.blog">Блог</li></ol>
+</nav>
+<section class="section">
+ <div class="container">
+  <h1 data-i18n="blog.h1">Блог о странах</h1>
+  <p data-i18n="blog.p">Сорок пять стран — и на каждую своя причина ехать. Сегодняшняя подборка — ниже,
+     завтра придёт новая: заходите завтракать с миром.</p>
+  <div class="cards" id="blog-grid"></div>
+  <button class="btn btn--ghost" id="blog-reroll" type="button" data-i18n="blog.reroll">Показать другие страны</button>
+ </div>
+</section>
+</main>
+<div id="site-footer-host"></div>
+<script src="js/i18n.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/main.js"></script>
+<script src="data/blog-data.js"></script>
+<script src="js/blog.js"></script>
+</body>
+</html>

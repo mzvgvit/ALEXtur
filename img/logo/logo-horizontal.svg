@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70">
+  <g transform="translate(0,7) scale(0.5)">
+    <path d="M50 6C28 6 10 24 10 46c0 26 40 58 40 58s40-32 40-58C90 24 72 6 50 6Z" fill="#383B1B"/>
+    <path d="M31 62 44 28h12l13 34" fill="none" stroke="#F4F6E8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M37 50h26" stroke="#A7AF4C" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="62" y="46" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#383B1B">ALEX<tspan fill="#C4652F">tur</tspan></text>
+</svg>

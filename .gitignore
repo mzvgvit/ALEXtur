@@ -1,0 +1,13 @@
+# Локальные настройки и системные файлы
+.DS_Store
+.claude/settings.local.json
+
+# Ключи и секреты остаются только локально
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+api-keys.*
+keys.*
+secrets.*

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Статья | ALEXtur</title>
+<meta name="description" content="Авторская статья блога ALEXtur: страны, маршруты и впечатления.">
+<link rel="icon" type="image/svg+xml" href="img/logo/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="article">
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+<div id="site-header-host"></div>
+<main id="main">
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+ <ol><li><a href="index.html" data-i18n="nav.index">Главная</a></li><li><a href="blog.html" data-i18n="nav.blog">Блог</a></li><li aria-current="page" id="crumb">Статья</li></ol>
+</nav>
+<section class="section">
+ <div class="container" style="max-width:820px">
+  <h1 id="a-title">Загрузка статьи…</h1>
+  <div class="media" id="a-media" style="aspect-ratio:16/9"></div>
+  <p id="a-story" style="margin-top:22px;font-size:1.05rem"></p>
+  <h3 style="margin-top:26px" data-i18n="article.tips">Что знать перед поездкой</h3>
+  <ul class="chips" id="a-tips"></ul>
+  <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+   <a class="btn" href="https://wa.me/393885758059" rel="noopener" data-i18n="article.cta">Заказать тур по этой стране</a>
+   <a class="btn btn--ghost" href="mailto:booking@ALEXtour.com" data-i18n="article.mail">Написать на почту</a>
+   <a class="btn btn--ghost" href="blog.html" data-i18n="article.back">← Другие статьи</a>
+  </div>
+ </div>
+</section>
+</main>
+<div id="site-footer-host"></div>
+<script src="js/i18n.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/main.js"></script>
+<script src="data/blog-data.js"></script>
+<script src="js/blog.js"></script>
+<script>
+(function(){
+  var p=new URLSearchParams(location.search);
+  var c=COUNTRIES.find(x=>x.i===p.get('i'));
+  if(!c){location.href='blog.html';return}
+  var titleEl=document.getElementById('a-title'),storyEl=document.getElementById('a-story'),
+      tipsEl=document.getElementById('a-tips'), crumbEl=document.getElementById('crumb');
+  function render(){
+    var crumb=I18N.lang()==='en'?c.n.en:(I18N.lang()==='it'?c.n.it:c.n.ru);
+    crumbEl.textContent=crumb;
+    titleEl.textContent=crumb;
+    document.title=I18N.t('article.titlefmt').replace('{n}',crumb);
+    storyEl.textContent=I18N.pick(c.s);
+    tipsEl.innerHTML=I18N.pick(c.t).map(function(t){return '<li>'+t.replace(/[&<>]/g,function(m){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[m]})+'</li>'}).join('');
+  }
+  var img=document.createElement('img');
+  img.className='card__media';img.loading='lazy';img.alt='';
+  img.addEventListener('error',()=>{
+    const d=document.createElement('div');
+    d.className='img-fallback card__media';
+    d.style.cssText='aspect-ratio:16/9';
+    d.textContent=img.alt;
+    m.replaceWith(d);
+  });
+  var m=document.getElementById('a-media');
+  img.src='img/blog/'+c.i+'.jpg';
+  // alt подставляем после инициализации I18N (DOMContentLoaded), чтобы был на языке страницы
+  document.addEventListener('DOMContentLoaded',()=>{
+    render();
+    img.alt=c.n[I18N.lang()]||c.n.ru;
+    img.dataset.fallback=img.alt;
+    m.replaceWith(img);
+  });
+  window.addEventListener('alextur:lang',render);
+})();
+</script>
+</body>
+</html>
