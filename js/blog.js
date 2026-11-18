@@ -16,7 +16,7 @@ function cardHTML(c){
  return '<article class="card"><img class="card__media" loading="lazy" src="img/blog/'+c.i+
  '.jpg" alt="'+T.pick(c.n)+'" data-fallback="'+T.pick(c.n)+'"><div class="card__body"><h3>'+T.pick(c.n)+
  ' <span class="tag">'+T.pick(c.r)+'</span></h3><p>'+T.pick(c.d)+'</p>'+
- '<a class="btn btn--ghost" style="margin-top:auto;max-width:250px" href="article.html?i='+c.i+'">'+T.t('blog.card')+'</a></div></article>';
+ '<a class="btn btn--ghost" style="margin-top:auto;max-width:250px" href="blog/'+c.i+'.html">'+T.t('blog.card')+'</a></div></article>';
 }
 function bindFallbacks(scope){
  scope.querySelectorAll('img[data-fallback]').forEach(img=>{

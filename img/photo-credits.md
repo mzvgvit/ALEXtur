@@ -104,3 +104,5 @@ Feel free to use my photos, but ple | CC BY-SA 3.0 |
 | `retreat/img/veneto-valdobbiadene.jpg` | [Valdobbiadene - San Giovanni2.jpg](https://commons.wikimedia.org/wiki/File:Valdobbiadene_-_San_Giovanni2.jpg) | Oursana | Public domain |
 
 В галерее Венето дополнительно используется `img/blog/italy.jpg` (атрибуция выше).
+
+Файлы с суффиксами `-640.jpg` и `-960.jpg` — уменьшенные производные исходных фотографий для адаптивной загрузки; авторы и лицензии сохраняются как у исходных файлов.

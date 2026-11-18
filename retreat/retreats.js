@@ -43,7 +43,7 @@ window.ALEX_RETREATS={
  },
  tours:{
   puglia:{
-   hero:'img/puglia-ostuni.jpg',
+   hero:'img/puglia-ostuni.jpg',heroWidth:1600,heroHeight:1066,
    gallery:['img/puglia-ostuni.jpg','img/puglia-orecchiette.jpg','img/puglia-alberobello.jpg','img/puglia-burrata.jpg','img/puglia-polignano.jpg','img/puglia-lecce.jpg','img/puglia-olive.jpg','img/puglia-focaccia.jpg'],
    stats:[8,12,5,1],extraDay:true,hideMedia:true,
    ru:{
@@ -133,7 +133,7 @@ window.ALEX_RETREATS={
    }
   },
   veneto:{
-   hero:'img/veneto-rotonda.jpg',
+   hero:'img/veneto-rotonda.jpg',heroWidth:1600,heroHeight:1112,
    gallery:['img/veneto-rotonda.jpg','img/veneto-palladiana.jpg','../img/blog/italy.jpg','img/veneto-barbaro.jpg','img/veneto-verona.jpg','img/veneto-burano.jpg','img/veneto-masks.jpg','img/veneto-valdobbiadene.jpg'],
    stats:[8,12,6,1],extraDay:true,hideMedia:true,
    ru:{

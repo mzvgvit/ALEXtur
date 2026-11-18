@@ -13,6 +13,8 @@ const NAV_ITEMS=[
  {f:'about.html',k:'nav.about'}
 ];
 const LANGS=[['ru','RU','Русский'],['en','EN','English'],['it','IT','Italiano']];
+// префикс путей для страниц в подпапках (blog/<slug>.html): ссылка от корня сайта
+const ROOT=(document.body&&document.body.dataset.sub==='blog')?'../':'';
 function renderSwitcher(){
  const l=I18N.lang();
  return '<select class="lang-switch" aria-label="'+I18N.t('lang.aria')+'">'+
@@ -20,13 +22,13 @@ function renderSwitcher(){
   '</select>';
 }
 function siteHeader(){
- const page=location.pathname.split('/').pop()||'index.html';
+ const page=(location.pathname.split('/').pop()||'index.html');
  const items=NAV_ITEMS.map(it=>{
-  const act=(page===it.f)?' class="is-active" aria-current="page"':'';
-  return '<li><a'+act+' href="'+it.f+'">'+I18N.t(it.k)+'</a></li>';
+  const act=((page===it.f)||(page===''&&it.f==='index.html'))?' class="is-active" aria-current="page"':'';
+  return '<li><a'+act+' href="'+ROOT+it.f+'">'+I18N.t(it.k)+'</a></li>';
  }).join('');
  return '<header class="site-header"><div class="container header-inner">'+
- '<a class="logo" href="index.html">'+LOGO+'<span class="logo__word">ALEX<em>tur</em></span></a>'+
+ '<a class="logo" href="'+ROOT+'index.html">'+LOGO+'<span class="logo__word">ALEX<em>tur</em></span></a>'+
  '<nav class="nav" id="site-nav" aria-label="'+I18N.t('nav.aria')+'"><ul>'+items+'</ul></nav>'+
  '<div class="header-tools">'+renderSwitcher()+
  '<button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">☰<span class="visually-hidden">'+I18N.t('menu.aria')+'</span></button>'+
@@ -36,8 +38,8 @@ function siteFooter(){
  return '<footer class="site-footer"><div class="container"><div class="footer-grid">'+
  '<div><h4>ALEXtur</h4><p>'+I18N.t('footer.blurb')+'</p></div>'+
  '<div><h4>'+I18N.t('footer.contacts')+'</h4><p>booking@ALEXtour.com<br>+39-388-57-58059 (WhatsApp)</p></div>'+
- '<div><h4>'+I18N.t('footer.sections')+'</h4><p><a href="index.html">'+I18N.t('nav.index')+'</a> · <a href="mission.html">'+I18N.t('nav.mission')+'</a> · <a href="countries.html">'+I18N.t('nav.countries')+'</a> · <a href="blog.html">'+I18N.t('nav.blog')+'</a><br>'+
- '<a href="faq.html">'+I18N.t('nav.faq')+'</a> · <a href="reviews.html">'+I18N.t('nav.reviews')+'</a> · <a href="about.html">'+I18N.t('nav.about')+'</a><br><a href="retreat/index.html#retreats" style="color:#F2C977">'+I18N.t('footer.retreat')+' →</a></p></div>'+
+ '<div><h4>'+I18N.t('footer.sections')+'</h4><p><a href="'+ROOT+'index.html">'+I18N.t('nav.index')+'</a> · <a href="'+ROOT+'mission.html">'+I18N.t('nav.mission')+'</a> · <a href="'+ROOT+'countries.html">'+I18N.t('nav.countries')+'</a> · <a href="'+ROOT+'blog.html">'+I18N.t('nav.blog')+'</a><br>'+
+ '<a href="'+ROOT+'faq.html">'+I18N.t('nav.faq')+'</a> · <a href="'+ROOT+'reviews.html">'+I18N.t('nav.reviews')+'</a> · <a href="'+ROOT+'about.html">'+I18N.t('nav.about')+'</a><br><a href="'+ROOT+'retreat/index.html#retreats" style="color:#F2C977">'+I18N.t('footer.retreat')+' →</a></p></div>'+
  '</div><div class="copy"><span>© <span data-year>2025</span> ALEXtur</span><span>'+I18N.t('footer.tag')+'</span></div></div></footer>';
 }
 function mountChrome(){

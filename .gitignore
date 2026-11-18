@@ -2,6 +2,10 @@
 .DS_Store
 .claude/settings.local.json
 
+# Локальная библиотека Modern Web Guidance и её ярлык не публикуем
+modernWEB/
+.claude/skills/modern-web-guidance
+
 # Ключи и секреты остаются только локально
 .env
 .env.*

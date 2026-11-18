@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /tmp/
+
+Sitemap: https://mzvgvit.github.io/ALEXtur/sitemap.xml
