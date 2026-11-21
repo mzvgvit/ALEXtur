@@ -1,5 +1,5 @@
 /* ===== ALEXtur — тема «Неспелая оливка» (компакт-версия) ===== */
-:root{--olive-50:#F4F6E8;--olive-100:#E9EDD2;--olive-300:#CBD399;--olive-500:#A7AF4C;--olive-600:#89913C;--olive-700:#6C7330;--olive-900:#383B1B;--ink:#2B2A20;--accent:#C4652F;--paper:#FDFDF7;--radius:14px;--shadow:0 8px 28px rgba(56,59,27,.14);--maxw:1180px;--font:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+:root{--olive-50:#F4F6E8;--olive-100:#E9EDD2;--olive-300:#CBD399;--olive-500:#A7AF4C;--olive-600:#89913C;--olive-700:#6C7330;--olive-900:#383B1B;--ink:#2B2A20;--accent:#C4652F;--accent-deep:#A64B1C;--paper:#FDFDF7;--radius:14px;--shadow:0 8px 28px rgba(56,59,27,.14);--maxw:1180px;--font:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font:16px/1.6 var(--font);color:var(--ink);background:var(--olive-100)}
@@ -16,14 +16,14 @@ h1,h2,h3{line-height:1.25;color:var(--olive-900)}
 .site-header{background:var(--olive-900);position:sticky;top:0;z-index:50}
 .header-inner{display:flex;align-items:center;gap:26px;min-height:64px}
 .logo{display:flex;align-items:center;gap:10px;color:#F3F5E4;text-decoration:none;font-weight:800;font-size:1.25rem}
-.logo em{font-style:normal;color:var(--accent)}
+.logo em{font-style:normal;color:#CB6C37}
 .nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
 .nav a{color:#EFF1DB;text-decoration:none;padding:18px 2px;border-bottom:3px solid transparent;display:block}
 .nav a:hover{color:#fff;border-color:var(--olive-500)}
 .nav a.is-active{color:#fff;border-color:var(--olive-500)}
 .menu-toggle{display:none;margin-left:auto;background:none;border:2px solid var(--olive-500);color:#fff;border-radius:8px;font-size:1.3rem;padding:6px 12px;cursor:pointer}
 .header-tools{margin-left:auto;display:flex;align-items:center;gap:10px}
-.lang-switch{background:var(--olive-700);color:#fff;border:1px solid var(--olive-500);border-radius:999px;padding:7px 10px;font:inherit;font-size:.85rem;cursor:pointer}
+.lang-switch{background:var(--olive-900);color:#fff;border:1px solid var(--olive-500);border-radius:999px;padding:7px 10px;font:inherit;font-size:.85rem;cursor:pointer}
 .lang-switch:hover{background:var(--olive-600)}
 .lang-switch option{color:#222;background:#fff}
 .menu-toggle{display:none}
@@ -46,10 +46,10 @@ h1,h2,h3{line-height:1.25;color:var(--olive-900)}
 .card p{margin:0;font-size:.95rem}
 .card__meta{list-style:none;display:flex;flex-wrap:wrap;gap:7px;padding:0;margin:2px 0 4px;font-size:.8rem;color:var(--olive-700)}
 .card__meta li{background:var(--olive-100);padding:3px 10px;border-radius:999px}
-.price{margin-top:auto;font-weight:700;font-size:1.2rem;color:var(--accent);padding-top:6px}
+.price{margin-top:auto;font-weight:700;font-size:1.2rem;color:var(--accent-deep);padding-top:6px}
 .card--soon .card__media{opacity:.55}
 .tag{display:inline-block;background:var(--olive-100);color:var(--olive-700);font-size:.75rem;padding:3px 10px;border-radius:999px;margin-left:6px}
-.tag--soon{background:var(--accent);color:#fff}
+.tag--soon{background:var(--accent-deep);color:#fff}
 .badge{background:var(--accent);color:#fff;font-size:.62rem;padding:2px 7px;border-radius:999px;margin-left:5px}
 .media{aspect-ratio:16/10;display:grid;place-items:center;background:linear-gradient(135deg,#CBD399,#A7AF4C);color:#fff;font-weight:600;text-align:center;padding:10px;border-radius:14px 14px 0 0}
 .img-fallback{background:linear-gradient(135deg,#CBD399,#A7AF4C);display:grid;place-items:center;color:#fff;font-weight:600;text-align:center;padding:10px}
