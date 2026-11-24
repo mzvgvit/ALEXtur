@@ -1,5 +1,5 @@
 /* ===== ALEXtur — тема «Неспелая оливка» (компакт-версия) ===== */
-:root{--olive-50:#F4F6E8;--olive-100:#E9EDD2;--olive-300:#CBD399;--olive-500:#A7AF4C;--olive-600:#89913C;--olive-700:#6C7330;--olive-900:#383B1B;--ink:#2B2A20;--accent:#C4652F;--accent-deep:#A64B1C;--paper:#FDFDF7;--radius:14px;--shadow:0 8px 28px rgba(56,59,27,.14);--maxw:1180px;--font:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+:root{--olive-50:#F4F6E8;--olive-100:#E9EDD2;--olive-300:#CBD399;--olive-500:#A7AF4C;--olive-600:#89913C;--olive-700:#5F6628;--olive-900:#383B1B;--ink:#2B2A20;--accent:#C4652F;--accent-deep:#A64B1C;--paper:#FDFDF7;--radius:14px;--shadow:0 8px 28px rgba(56,59,27,.14);--maxw:1180px;--font:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font:16px/1.6 var(--font);color:var(--ink);background:var(--olive-100)}

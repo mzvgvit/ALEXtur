@@ -1,0 +1,21 @@
+# ALEXtur — авторские экскурсии по Италии и ретриты в Тоскане
+
+ALEXtur — сайт персонального гида-экскурсовода (Москва/Италия): авторские экскурсии по Италии для русскоязычных путешественников и организация путешествий по всему миру для итальянских клиентов. Языки сайта: русский (основной), английский, итальянский (переключатель на страницах).
+
+## Ключевые страницы
+
+- [Главная](https://mzvgvit.github.io/ALEXtur/index.html) — услуги, маршруты, цены от €35
+- [Страны и континенты](https://mzvgvit.github.io/ALEXtur/countries.html) — каталог направлений
+- [Блог](https://mzvgvit.github.io/ALEXtur/blog.html) — 45 авторских статей по странам: маршрут по дням, достопримечательности, смета
+- [Отзывы](https://mzvgvit.github.io/ALEXtur/reviews.html) — отзывы клиентов
+- [О нас / принципы](https://mzvgvit.github.io/ALEXtur/mission.html) — миссия и подход
+- [FAQ](https://mzvgvit.github.io/ALEXtur/faq.html) — частые вопросы
+- [Ретрит в Тоскане, 8–15 июня 2027](https://mzvgvit.github.io/ALEXtur/retreat/index.html) — недельный ретрит на вилле у Сиены
+
+## Контакт
+
+booking@ALEXtour.com, WhatsApp https://wa.me/393885758059, форма на главной. Источники фотографий: Wikimedia Commons (https://mzvgvit.github.io/ALEXtur/img/photo-credits.html).
+
+## Цитирование
+
+При использовании материалов сайта ссылайтесь на конкретную страницу с префиксом https://mzvgvit.github.io/ALEXtur/.
